@@ -1,5 +1,5 @@
 /* Shelf website — offline support. Bump VERSION when you deploy new files. */
-var VERSION = 'shelf-web-2.2.0';
+var VERSION = 'shelf-web-2.3.0';
 var SHELL = ['./', './index.html', './css/styles.css', './js/boot.js', './js/config.js', './js/core.js', './js/store.js', './js/app.js',
   './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png', './icons/favicon-32.png'];
 
