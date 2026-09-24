@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" class="page web">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preconnect" href="https://t2.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.google.com">
+  <title>Shelf — App Launcher</title>
+  <meta name="description" content="Shelf — your favorite websites as beautiful apps and folders.">
+  <meta name="theme-color" content="#F2F2F7">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Shelf">
+  <meta property="og:title" content="Shelf — App Launcher">
+  <meta property="og:description" content="Your favorite websites as beautiful apps and folders.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/boot.js"></script>
+</head>
+<body>
+  <div id="splash" class="splash" aria-hidden="true"><div class="splash-mark brand-mark big"><i></i><i></i><i></i><i></i></div><div class="splash-name">Shelf</div></div>
+  <div id="root" class="root">
+    <main id="home" class="view view-home">
+      <header id="topbar" class="topbar">
+        <label class="search" id="search-wrap">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="search" type="search" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search apps">
+          <button id="search-clear" class="search-clear" type="button" aria-label="Clear search" hidden>
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8 8 16M8 8l8 8"/></svg>
+          </button>
+        </label>
+        <div id="edit-title" class="edit-title" hidden>
+          <strong>Edit Apps</strong>
+          <span>Drag to rearrange · Tap to edit</span>
+        </div>
+        <div class="topbar-actions">
+          <button id="btn-add" class="icon-btn" type="button" aria-label="Add app" title="Add app">
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <button id="btn-settings" class="icon-btn" type="button" aria-label="Settings" title="Settings"></button>
+          <button id="btn-done" class="pill-btn" type="button" hidden>Done</button>
+        </div>
+      </header>
+
+      <section id="apps" class="apps" role="list" aria-label="Apps"></section>
+      <nav id="dots" class="dots" aria-label="Pages" hidden></nav>
+      <section id="empty" class="empty" hidden></section>
+      <section id="no-results" class="no-results" hidden></section>
+    </main>
+
+    <section id="settings" class="view view-settings" aria-hidden="true" aria-label="Settings"></section>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/todos.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
